@@ -1,0 +1,47 @@
+package parkingLot;
+
+public class Info{
+	
+
+		private int currentCarsAmount = 0;
+
+		private final int MAXCARSAMOUNT = 50;
+		
+		public int getMAXCARSAMOUNT(){
+			return MAXCARSAMOUNT;
+		}
+
+		public int getCurrentCarsAmount() {
+			return currentCarsAmount;
+
+		}
+
+		public void addSingleCar() {
+			currentCarsAmount++;
+		}
+
+		public String addMultipleCars(int cars) {
+			if (currentCarsAmount + cars > 50 || cars < 1) {
+
+				return "invalid";
+			} else {
+
+				currentCarsAmount = currentCarsAmount + cars;
+				return "valid";
+			}
+		}
+
+		public void removeSingleCar() {
+			currentCarsAmount--;
+		}
+
+		public String removeMultipleCars(int cars) {
+			if (currentCarsAmount - cars > 50 || cars < 2) {
+				return "invalid";
+			} else {
+				currentCarsAmount = currentCarsAmount - cars;
+				return "valid";
+			}
+		}
+
+	}
