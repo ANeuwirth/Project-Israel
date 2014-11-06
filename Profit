@@ -1,0 +1,89 @@
+package parkingLot;
+
+public class Profit{
+	
+	int totCars = 0;
+
+	double income = 0.0;
+
+	double min = 0;
+
+	double max = 0;
+
+	double avrg = 0.0;
+
+	public void calcProfit(double sales){
+
+	income += sales;
+
+	}
+
+	public double getIncome() {
+
+	return income;
+
+	}
+
+	// entCars is how many are added
+
+	public void totalCars(int entCars){
+
+	totCars += entCars;
+
+	}
+
+	// Get minimum hours
+
+	public int getTotCars() {
+
+	return totCars;
+
+	}
+
+
+	public void minCount(double hoursAmnt){
+
+	if (min == 0){
+
+	min = hoursAmnt;
+
+	}else if (hoursAmnt < min)
+
+	min = hoursAmnt;
+
+	else{
+
+	System.out.println("Sorry, the amount entered is invalid.");
+
+	}
+
+	}
+
+	// Get Maximum hours
+
+	public void maxCount(double hoursAmnt){
+
+	if (hoursAmnt > max)
+
+	max = hoursAmnt;
+
+	else{
+
+	System.out.println("Sorry, the amount entered is invalid.");
+
+	}
+
+	}
+
+	// Get average hours
+
+	public void avrgCount(double hoursAmnt){
+
+	avrg = hoursAmnt / totCars;
+
+	}
+
+	
+
+	}
+
